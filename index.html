@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarvelVerse | Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><span class="marvel-bg">Marvel</span>Verse</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/videoplayback.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <img src="assets/marvel.jpg" alt="Marvel Universe" class="hero-center-img fade-in">
+            <h1 class="hero-title" style="color: var(--doomsday-red);">Welcome to the Marvel Cinematic Universe</h1>
+            <p class="hero-subtitle">Prepare for the arrival of Doomsday and explore the legacy of Earth's mightiest
+                heroes.</p>
+            <a href="game.html" class="btn btn-primary cta-btn">Play Trivia</a>
+        </div>
+    </header>
+
+    <!-- Upcoming Movies Section -->
+    <section class="movies section-padding" id="upcoming">
+        <div class="container">
+            <div class="text-center fade-in scroll-anim">
+                <h2 class="section-title"> Here's what comming up This year, Excited ?!</h2>
+                <div class="title-underline center-line colored"></div>
+                <p>The universe is expanding. Prepare for the next phases.</p>
+            </div>
+
+            <div class="movies-grid">
+                <!-- Movie 1 -->
+                <div class="movie-card fade-in scroll-anim movie-card--spiderman">
+                    <img src="assets/spiderman.jpg" alt="Spider-Man" class="movie-image movie-image--spiderman">
+                    <div class="movie-info">
+                        <h3>Spider-Man</h3>
+                        <p>The friendly neighborhood Spider-Man swings back into action facing new mysterious dangers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Movie 2 -->
+                <div class="movie-card fade-in scroll-anim">
+                    <img src="assets/new doomsaday imae4.jpg" alt="Avengers Doomsday" class="movie-image">
+                    <div class="movie-info">
+                        <h3 style="color: var(--primary-color);">Avengers: Doomsday</h3>
+                        <p>A multiversal collapse brings forth the ultimate villain. The Avengers must assemble once
+                            more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doomsday Countdown Section -->
+    <section class="countdown-section section-padding bg-dark" id="countdown">
+        <div class="container text-center fade-in scroll-anim">
+            <h2 class="section-title text-white"> Doomsday is Coming in </h2>
+            <div class="title-underline center-line" style="background-color: var(--doomsday-red);"></div>
+            <p style="color: #aaa; margin-bottom: 30px;">The multiversal collapse is imminent.</p>
+
+            <div id="countdown-timer" class="countdown-container">
+                <div class="time-box">
+                    <span id="days" class="time-number">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours" class="time-number">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes" class="time-number">00</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds" class="time-number">00</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-container">
+                <div id="countdown-progress" class="progress-bar"></div>
+            </div>
+
+            <h1 id="doomsday-message"
+                style="display: none; color: var(--doomsday-red); font-size: 3rem; margin-top: 30px;"
+                class="shake-anim">💥 DOOMSDAY HAS ARRIVED!</h1>
+        </div>
+    </section>
+
+    <!-- Stan Lee Section -->
+    <section class="stan-lee section-padding bg-alt" id="stan-lee">
+        <div class="container flex-row">
+            <div class="stan-image-wrapper fade-in scroll-anim">
+                <img src="assets/stanlee.webp" alt="Stan Lee Portrait" id="stan-img">
+            </div>
+            <div class="stan-text-wrapper fade-in scroll-anim">
+                <h2 class="section-title" style="font-size: 2.5rem;">The Man Behind the Mask</h2>
+                <h3
+                    style="color: var(--primary-color); margin-bottom: 15px; font-family: 'Bebas Neue', cursive; font-size: 1.8rem; letter-spacing: 1px;">
+                    How Stan Lee Built a Universe</h3>
+                <div class="title-underline"></div>
+
+                <p>In 1961, Stanley Martin Lieber—better known as Stan Lee—was on the edge of quitting.</p>
+                <p>After nearly 20 years of writing comic stories about cowboys, monsters, and forgettable heroes, he
+                    felt stuck. The characters were always perfect. Too perfect. And honestly… kind of boring. Stan was
+                    tired, uninspired, and ready to walk away from it all.</p>
+
+                <p>Then something simple—but powerful—happened. His wife, Joan, told him:</p>
+                <blockquote
+                    style="border-left: 4px solid var(--primary-color); padding-left: 15px; margin: 20px 0; font-style: italic; font-size: 1.2rem; color: var(--accent-gold);">
+                    "If you’re going to quit anyway, why not write one story the way you want to?"
+                </blockquote>
+
+                <p>That one sentence changed everything. So Stan took a risk.</p>
+                <p>Instead of creating flawless heroes, he created the Fantastic Four—a team that argued, struggled, and
+                    felt real. They weren’t just saving the world… they were dealing with everyday problems too. And
+                    that was the turning point.</p>
+
+                <p>Working with legendary artists like Jack Kirby and Steve Ditko, Stan started building something
+                    completely different:</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 5px;"><strong>A teenager like Spider-Man,</strong> juggling powers with
+                        homework and self-doubt.</li>
+                    <li style="margin-bottom: 5px;"><strong>A group like the X-Men,</strong> fighting for acceptance in
+                        a world that feared them.</li>
+                    <li style="margin-bottom: 5px;"><strong>A character like Hulk,</strong> battling not just
+                        enemies—but his own anger.</li>
+                </ul>
+
+                <p>These weren’t just superheroes. They were human. And that’s what made people connect.</p>
+                <p style="font-weight: bold; color: var(--primary-color); font-size: 1.1rem;">What started as one honest
+                    story grew into something massive—the Marvel Universe.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-bg-overlay"></div>
+            <div class="container footer-content fade-in scroll-anim">
+                <div class="footer-logo"><span class="marvel-bg">Marvel</span>Verse</div>
+
+                <p class="footer-quote">"In the Marvel Cinematic Universe, even the freaks are the most loved."</p>
+
+                <div class="socials">
+                    <a href="https://www.facebook.com/Marvel/" target="_blank" rel="noopener noreferrer"
+                        title="Facebook">FB</a>
+                    <a href="https://x.com/Marvel" target="_blank" rel="noopener noreferrer" title="X (Twitter)">X</a>
+                    <a href="https://www.instagram.com/marvel/?hl=en" target="_blank" rel="noopener noreferrer"
+                        title="Instagram">IG</a>
+                </div>
+
+                <p class="footer-copy">&copy; 2026 MarvelVerse College Project. Built with passion.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

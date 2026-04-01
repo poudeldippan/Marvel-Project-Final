@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarvelVerse | Contact HQ</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form-wrapper {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            background-color: var(--bg-alt);
+            color: var(--text-color);
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .error-msg {
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+            font-weight: bold;
+        }
+
+        .success-msg {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+            .contact-form-wrapper {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-alt">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><a href="index.html" style="color:inherit;"><span class="marvel-bg">Marvel</span>Verse</a></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" style="margin-top: 80px; min-height: calc(100vh - 80px - 100px); display: flex; align-items: center;">
+        <div class="container" style="width: 100%;">
+            
+            <div class="text-center fade-in scroll-anim" style="margin-bottom: 40px;">
+                <h2 class="section-title">Contact Headquarters</h2>
+                <div class="title-underline center-line colored"></div>
+                <p>Have an inquiry about the Avengers Initiative or want to report a Skrull invasion? Let us know!</p>
+            </div>
+
+            <div class="contact-form-wrapper fade-in scroll-anim">
+                <div id="success-box" class="success-msg">
+                    Transmission Sent! We have received your message.
+                </div>
+                
+                <form id="contact-form" action="https://formsubmit.co/chapagainbishes16@gmail.com" method="POST">
+                    <!-- Disable FormSubmit captcha for smooth JS background transmission -->
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label for="name">Agent Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="E.g. Nick Fury">
+                        <div class="error-msg" id="name-error">Name cannot be empty.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Secure Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="agent@shield.gov">
+                        <div class="error-msg" id="email-error">Please enter a valid email format.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Intel / Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter your intel here..."></textarea>
+                        <div class="error-msg" id="message-error">Message must be at least 10 characters long.</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">Transmit Data</button>
+                </form>
+            </div>
+            
+            <!-- Meme & Runaway Button Section -->
+            <div class="meme-text text-center fade-in scroll-anim" style="margin-top: 60px;">
+                <h3 style="color: var(--primary-color); font-family: 'Bebas Neue', cursive; font-size: 2rem; letter-spacing: 1px;">Trying to reach me directly?</h3>
+                <p style="font-size: 1.2rem; margin-top: 10px;">S.H.I.E.L.D. hasn't cleared you yet.<br>But don't worry—Bruce Banner might leak my number if you ask nicely!</p>
+                
+                <div class="runaway-container" style="position: relative; height: 150px; width: 100%; margin-top: 30px; display: flex; justify-content: center; align-items: center;">
+                    <button id="runaway-btn" class="btn btn-primary" style="position: absolute; transition: all 0.2s ease;">Direct Contact</button>
+                </div>
+                
+                <div style="margin-top: 50px;">
+                    <img src="assets/nickfury.avif" alt="Nick Fury Glare" style="max-width: 300px; border-radius: 8px; border: 3px solid var(--primary-color); box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Deadpool Custom Modal (Hidden by Default) -->
+    <div id="deadpool-modal" class="modal-overlay hidden">
+        <div class="modal-content text-center">
+            <span class="close-modal" id="close-dp-modal">&times;</span>
+            <img src="assets/deadpool.jpg" alt="Deadpool Intervenes" class="modal-image bounce-anim">
+            <h2 style="color: var(--doomsday-red); font-family: 'Bebas Neue', cursive; font-size: 2.5rem; margin-top: 15px;">Wait... how did you click that?!</h2>
+            <p style="font-size: 1.2rem; margin-top: 10px;">Damn, I am absolutely amazed!<br>S.H.I.E.L.D. security is useless against you.</p>
+            <p style="font-size: 1.5rem; font-weight: bold; margin-top: 15px; color: var(--primary-color);">Here's my direct line:<br>📞 9863199634</p>
+            <p style="font-style: italic; color: #888; font-size: 0.9rem; margin-top: 10px;">(Please don't tell Fury I gave it to you...)</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
