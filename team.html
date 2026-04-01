@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarvelVerse | Our Team</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-alt">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><a href="index.html" style="color:inherit;"><span class="marvel-bg">Marvel</span>Verse</a></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero Banner -->
+    <div class="page-hero-banner" style="margin-top: 80px;">
+        <h1><span>Our</span> Team</h1>
+        <div class="banner-line"></div>
+    </div>
+
+    <!-- Group Members Section -->
+    <section class="team section-padding" id="team" style="min-height: 70vh;">
+        <div class="container">
+            <h2 class="section-title text-center">Meet the Developers</h2>
+            <div class="title-underline center-line colored"></div>
+
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-card fade-in scroll-anim">
+                    <img src="assets/member1.jpeg" alt="Aryan Ghimire" class="team-avatar">
+                    <h3 style="color: var(--primary-color);">Aryan Ghimire</h3>
+                    <p class="role">Project Coordinator</p>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">CSS Design & Report Writing</p>
+                </div>
+                <!-- Member 2 (Project Head) -->
+                <div class="team-card fade-in scroll-anim">
+                    <a href="https://www.instagram.com/bishes_chapagain_?igsh=MTJqb3oxc2NlaGxkcA%3D%3D" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <img src="assets/Member4.jpeg" alt="Bishesh Chapagain" class="team-avatar" style="border-color: var(--accent-gold);">
+                    </a>
+                    <h3 style="color: var(--primary-color);">Bishesh Chapagain</h3>
+                    <p class="role">Project Head</p>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">JS Logic & Deployment</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="team-card fade-in scroll-anim">
+                    <img src="assets/member2.jpeg" alt="Dippan Poudel" class="team-avatar">
+                    <h3 style="color: var(--primary-color);">Dippan Poudel</h3>
+                    <p class="role">Research and Developer</p>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">HTML Structure & PowerPoint Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
